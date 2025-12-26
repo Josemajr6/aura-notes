@@ -1,11 +1,3 @@
-//
-//  Note.swift
-//  AuraNotes
-//
-//  Created by José Manuel Jiménez Rodríguez on 22/12/25.
-//
-
-
 import Foundation
 import SwiftData
 

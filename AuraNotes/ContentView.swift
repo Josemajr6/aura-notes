@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  AuraNotes
-//
-//  Created by José Manuel Jiménez Rodríguez on 22/12/25.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -37,7 +30,7 @@ struct ContentView: View {
             Color.black.ignoresSafeArea()
             
             VStack(spacing: 0) {
-                // 1. Cabecera
+                // Cabecera
                 headerView
                 
                 // Divisor con gradiente sutil
@@ -47,7 +40,7 @@ struct ContentView: View {
                                    endPoint: .trailing)
                 )
                 
-                // 2. Área Principal
+                // Área Principal
                 ZStack {
                     if let note = selectedNote {
                         editorView(for: note)
@@ -76,11 +69,11 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
-                // 3. Barra de Estado Inferior
+                // Barra de Estado Inferior
                 statusBar
             }
             
-            // 4. Barra Flotante de Formato (Solo si hay selección de texto)
+            // Barra Flotante de Formato (Solo si hay selección de texto)
             if selectedNote != nil && isTextSelected {
                 VStack {
                     Spacer()
@@ -98,7 +91,7 @@ struct ContentView: View {
         }
         // --- ATAJOS DE TECLADO INVISIBLES ---
         .background {
-            // Es vital usar Character() para asegurar que el KeyEquivalent es válido
+            // Es importante usar Character() para asegurar que el KeyEquivalent es válido
             Button("New") { checkAndCreateNote() }
                 .keyboardShortcut(KeyEquivalent(shortcutNewNote.first ?? "n"), modifiers: .command)
             
@@ -407,14 +400,11 @@ struct ShortcutInputRow: View {
                         .stroke(Color.white.opacity(isFocused ? 0.5 : 0), lineWidth: 1)
                 )
                 .onChange(of: key) { oldValue, newValue in
-                    // LÓGICA CLAVE: Limitar a 1 carácter
+                    // Limitamos a 1 carácter
                     if newValue.count > 1 {
                         key = String(newValue.last!) // Mantiene el último carácter pulsado
                     }
                     // Asegurar que no esté vacío (volver al anterior o default)
-                    if newValue.isEmpty {
-                       // Opcional: permitir vacío o no. Aquí forzamos 1 char.
-                    }
                 }
         }
     }

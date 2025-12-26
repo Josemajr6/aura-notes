@@ -1,10 +1,3 @@
-//
-//  AuraEditor.swift
-//  AuraNotes
-//
-//  Created by José Manuel Jiménez Rodríguez on 22/12/25.
-//
-
 import SwiftUI
 import AppKit
 
