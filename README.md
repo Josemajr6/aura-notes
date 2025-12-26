@@ -67,6 +67,6 @@ Para crear un paquete de instalación distribuible:
 
 ## 👤 Autor
 
-**Desarrollador con ❤️ por José Manuel Jiménez Rodríguez**
+**Desarrollado con ❤️ por José Manuel Jiménez Rodríguez**
 
 *"System status: All systems operational. End of line."* █
